@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.application-wrapper {
+  @apply flex items-center justify-center w-screen min-h-screen;
+}
+
+.gallery-container {
+  @apply m-4 md:m-10 w-[900px] rounded-lg bg-white;
+}
+
+.gallery-toolbar {
+  @apply flex items-center justify-between px-8 py-3;
+}
+
+.toolbar-checkbox-container {
+  @apply flex items-center gap-4;
+}
+
+.toolbar-checkbox {
+  @apply w-5 h-5 cursor-pointer accent-blue-500;
+}
+
+.toolbar-text {
+  @apply text-xl font-semibold;
+}
+
+.toolbar-delete-button {
+  @apply text-red-500 transition duration-300 ease-in-out hover:underline;
+}
+
+.divider {
+  @apply h-[1px] bg-gray-300;
+}
+
+.image-grid {
+  @apply grid grid-cols-2 gap-4 p-8 auto-rows-fr sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5;
+}
+
+.grid-item {
+  transform-origin: 0 0;
+  @apply relative w-full h-auto overflow-hidden bg-white border border-[#A3A5A9] rounded-md cursor-pointer;
+}
+
+.grid-item:nth-child(1) {
+  @apply col-span-2 row-span-2;
+}
+
+.image-checkbox {
+  @apply absolute z-10 w-5 h-5 opacity-0 cursor-pointer top-3 left-3 accent-blue-500 group-hover:opacity-100 checked:opacity-100;
+}
+
+.image-overlay {
+  @apply absolute top-0 bottom-0 left-0 right-0 w-full h-full transition-opacity duration-300 ease-in-out bg-fixed bg-black opacity-0 group-hover:opacity-50 peer-checked:opacity-60 peer-checked:bg-[#F3F5F5];
+}
+
+.add-image-item {
+  @apply cursor-pointer relative w-full h-auto border border-[#C9CBCF] border-dashed rounded-md bg-[#FAFBFB];
+}
+
+.add-image-elements {
+  @apply absolute top-0 bottom-0 left-0 right-0 flex flex-col items-center justify-center gap-4;
+}
+
+.add-image-text {
+  @apply font-semibold text-center;
+}
